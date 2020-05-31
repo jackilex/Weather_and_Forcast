@@ -36,7 +36,7 @@ let location= "";
 function buildQueryUrl(){
 let key=`appid=04a7544cde188fba131a9fa347638501`;
 // let location= "austin";
-jqueryUrl= "https://api.openweathermap.org/data/2.5/weather?q="+location+"&units=imperial&"+key;   
+jqueryUrl= "HTTPS://api.openweathermap.org/data/2.5/weather?q="+location+"&units=imperial&"+key;   
 }
 let m= moment();
 
@@ -56,7 +56,7 @@ function getWeather(){
     let icon=data.weather[0].icon;
     let image=$('<img>');
     let pic= image.addClass('pic');
-    let imageAtt= image.attr('src','https://openweathermap.org/img/wn/'+icon+'@4x.png');
+    let imageAtt= image.attr('src','HTTPS://openweathermap.org/img/wn/'+icon+'@4x.png');
     
     //show results starts here
     $('#location').text(city);
@@ -87,7 +87,7 @@ function getWeather(){
 
         $.ajax({
             type:"GET",
-            url:"https://api.openweathermap.org/data/2.5/onecall?lat="+lat1+"&lon="+long1+"&exclude=hourly,minutely&units=imperial&appid=04a7544cde188fba131a9fa347638501"
+            url:"HTTPS://api.openweathermap.org/data/2.5/onecall?lat="+lat1+"&lon="+long1+"&exclude=hourly,minutely&units=imperial&appid=04a7544cde188fba131a9fa347638501"
         }).then(function(result){
         let uV= result.current.uvi;
         //this line is for the currrent UVI since the first API doesn't provide UVI
@@ -102,7 +102,7 @@ function getWeather(){
         let temp= result.daily[i].temp.max;
         let humidity= result.daily[i].humidity;
         let image=$('<img>');
-        let imageAtt= image.attr('src','https://openweathermap.org/img/wn/'+icon+'@2x.png')
+        let imageAtt= image.attr('src','HTTPS://openweathermap.org/img/wn/'+icon+'@2x.png')
         
         if (i === 1){
         $('#dat1').text(date);
