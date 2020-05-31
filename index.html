@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+    <script src="https://kit.fontawesome.com/d90c12d542.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Weather Forecast</title>
+</head>
+<body>
+
+    <form class="col d-flex justify-content-center" >
+    <div class="form-row align-items-center">
+        <div>
+            <input class="form-control" type="text" placeholder="Get City Weather Forecast" id="input">
+        </div>
+        <div>
+            <button class="btn btn-primary" id="add" type="submit" >Add</button>
+        </div>
+    </div>
+    </form>
+
+<div id="addbuttons" class="d-flex justify-content-center">
+
+</div>
+
+    
+<div class="container col-10 d-flex flex-column align-items-center box1" id="weathercon">
+<div class="row container d-flex " id="test">
+    <div class="container row-12-flex flex-col">
+        <div class="row d-flex flex-row justify-content-between " id="test">
+            <div class="d-flex" id="location"></div>
+            <div class="d-flex" id="date"></div>
+        </div>
+
+        <div class="row-6 d-flex flex-column justify-content-center" id="test">
+            <div class="align-self-center try all" id="logo">
+                <img src="" alt="" id="im">            
+            </div>
+            <p class="align-self-center" id="info"></p>
+        </div>
+
+        <div class="row d-block-flex flex-row justify-content-around" id="test">
+            <div id="temp" > </div>
+            <div id="humidity"></div>
+            <div id="speed"></div>
+            <div id="UV"></div>
+        </div>
+    </div>
+</div>
+</div>
+    <div class="container col-10 d-flex flex-column align-content-center box2">
+            <div class="container d-flex flex-column justify-content-center row-6" id="day1">
+                <p class="align-self-center" id="dat1"></p>
+                <div class="align-self-center try all" id="logo1"></div>
+                <div class="row d-block-flex flex-row justify-content-around">
+                    <div id="temp1"></div>
+                    <div id="humidity1"></div>
+                </div>  
+            </div>
+    </div>
+
+        <div class="container col-10 d-flex justify-content-around box3">
+            <div  id="day2">
+                <p class="align-self-center" id="dat2"></p>
+                <div class="align-self-center try all" id="logo2"></div>
+                <div class="row d-block-flex flex-row justify-content-around">
+                    <div id="temp2"></div>
+                    <div id="humidity2"></div>
+                </div>
+            </div>
+       
+
+            <div  id="day3">
+                <p class="align-self-center" id="dat3"></p>
+                <div class="align-self-center try all" id="logo3"></div>
+                <div class="row d-block-flex flex-row justify-content-around">
+                    <div id="temp3"></div>
+                    <div id="humidity3"></div>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="container col-10 d-flex justify-content-around box4">
+            <div id="day4">
+                <p class="align-self-center" id="dat4"></p>
+                <div class="align-self-center try all" id="logo4"></div>
+                <div class="row d-block-flex flex-row justify-content-around">
+                    <div id="temp4"></div>
+                    <div id="humidity4"></div>
+                </div>
+            </div>
+
+                <div id="day5">
+                    <p class="align-self-center" id="dat5"></p>
+                    <div class="align-self-center try all" id="logo5"></div>
+                    <div class="row d-block-flex flex-row justify-content-around">
+                        <div id="temp5"></div>
+                        <div id="humidity5"></div>
+                </div>
+            </div>
+            
+        </div>
+    
+    <!-- </div> -->
+   
+   
+
+   
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="weather.js"></script>
+</html>
+
+
