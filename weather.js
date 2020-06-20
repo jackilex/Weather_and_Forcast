@@ -1,36 +1,75 @@
 $(document).ready(function(event){
 //This click event is to add cities
+let location= "Austin";
+let cityArr=[];
+// setting value for city array
+
+
+recall()
+
 $('#add').on('click',function(event){
-    event.preventDefault();
+event.preventDefault();
+    
+pushSave(recall)
+   
+    
+})
+
+//setting my save cities function, pushing to array and local storage
+// and adding a call back function
+
+function pushSave(callback){
     let inputV= $('#input').val();
-    $('#addbuttons').children('button').remove()
+    cityArr.push(inputV);
+    if (cityArr.length> 0 && cityArr.length <= 5){
+    
+    localStorage.setItem('myCities',JSON.stringify(cityArr));
+    }else{
+    cityArr.shift();
+    localStorage.setItem('myCities',JSON.stringify(cityArr));
+    }   
+    callback()
+}
+
+//setting my recall functgion for saved cities
+function recall(){
+    
+    if(localStorage.getItem('myCities')){
+    cityArr= JSON.parse(localStorage.getItem("myCities"));
+    console.log('passing')
+    createButtons(cityArr);
+    }
+    
+}
+
+function createButtons(cityArr){
+    console.log('1');
+    $('#addbuttons').text(' ')
+    cityArr.forEach(function(city){
     let newB= $('<button>');
     let newClass= newB.addClass("btn btn-success btn2");
-    let text=newB.text(inputV);
-    let valueT=newB.attr('value',inputV);
+    let text=newB.text(city);
+    let valueT=newB.attr('value',city);
     $('#addbuttons').append(newB);
-    // location = inputV;
-    $('.all').empty();
-    // buildQueryUrl();
-    // getWeather();
-    localStorage.setItem(inputV,inputV);
     
-    $('#addbuttons').children('button').click(function(){
-        $('.all').empty();
-        $('#logo').children('img').remove();
-        // event.preventDefault();
-        // $('.all').empty();
-        $('img').attr('src','');
-        let thisB=$(this).text();
-        location=localStorage.getItem(thisB);
-        buildQueryUrl();
-        getWeather();
+    //create and event for each button passing to pass the alue of rech button to the api location
+    newB.click(function(event){
+        // location=localStorage.getItem(thisB);
+    $('img').remove()
+    location= newB.val();
+    buildQueryUrl();
+    getWeather()
+       
+    })
+    
     })
 
+}
 
-})
 //starts cities click event
-let location= "";
+
+buildQueryUrl();
+getWeather()
 
 // setting my key variables and URL inputs
 function buildQueryUrl(){
@@ -46,7 +85,7 @@ function getWeather(){
         type:"GET",
         url:jqueryUrl
     }).then(function(data){
-    console.log(data);    
+    // console.log(data);    
     let city= data.name;
     let description= data.weather[0].description;
     let temp=data.main.temp;
@@ -149,8 +188,8 @@ function getWeather(){
 
     
         
-        console.log(result)
-        console.log(result.daily[2].weather[0].icon)
+        // console.log(result)
+        // console.log(result.daily[2].weather[0].icon)
     
         })
     })
