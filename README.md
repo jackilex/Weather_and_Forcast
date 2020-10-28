@@ -14,7 +14,7 @@ README.md
 ---
 
 ## Description
-Getting your city current weather and forecast is a must for every adult. Thos web application allows you to search and add up to 5 cities. Add this free weather app to your bookmark and stay updated!!
+Getting your city current weather and forecast is a must for every adult. This web application allows you to search and add up to 5 cities and get weather updates base on the "Open Weather Map API". Add this free weather app to your bookmark and stay updated!!
 
 
 ---
