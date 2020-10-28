@@ -19,7 +19,7 @@ Getting your city current weather and forecast is a must for every adult. Thos w
 
 ---
 ## Installation
-Foloow the link and search for any US Cities
+Follow the link and search for any US Cities
 
 
 [Back To The Top](#read-me-template)
