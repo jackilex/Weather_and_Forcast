@@ -27,7 +27,7 @@ Foloow the link and search for any US Cities
 ---
 
 ## How To Use
-Foloow the link and search for any US Cities
+Follow the link and search for any US Cities
 
 [Back To The Top](#read-me-template)
 
